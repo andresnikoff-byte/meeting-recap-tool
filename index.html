@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recap — turn any meeting transcript into a clean summary</title>
+  <meta name="description" content="Paste a messy meeting or call transcript and get a clean summary with action items in seconds. Free, no login required." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <span class="eyebrow">● Free · no login required</span>
+    <h1>Turn any meeting transcript into a clean recap</h1>
+    <p class="sub">
+      Paste a messy Zoom, Meet, or call transcript below. Get a plain-English
+      summary and a clean action-item list in a few seconds — then copy it
+      or share a link.
+    </p>
+
+    <div class="card">
+      <textarea
+        id="transcript"
+        placeholder="Paste your transcript here (speaker names, timestamps, filler words — all fine, just paste the raw text)..."
+        maxlength="20000"
+      ></textarea>
+      <div class="row">
+        <span class="hint"><span id="charCount">0</span> / 20,000 characters</span>
+        <button class="btn-primary" id="generateBtn">Generate recap</button>
+      </div>
+      <div class="error" id="errorBox"></div>
+    </div>
+
+    <div class="card result" id="resultCard">
+      <h2>Summary</h2>
+      <p id="summaryText"></p>
+
+      <h2>Action items</h2>
+      <div id="actionItemsBox"></div>
+
+      <div id="topicsSection" style="display:none">
+        <h2>Topics</h2>
+        <p id="topicsText"></p>
+      </div>
+
+      <div class="result-actions">
+        <button class="btn-secondary" id="copyLinkBtn">Copy shareable link</button>
+        <button class="btn-secondary" id="copyTextBtn">Copy as text</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span id="footerNote">Your transcript is only used to generate this recap — it isn't stored.</span>
+      <span>Built with AI · feedback welcome</span>
+    </div>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>

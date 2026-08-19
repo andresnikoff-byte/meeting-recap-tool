@@ -1,0 +1,9 @@
+{
+  "name": "meeting-recap-tool",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Free tool that turns a pasted meeting transcript into a clean summary and action-item list.",
+  "engines": {
+    "node": ">=18"
+  }
+}
